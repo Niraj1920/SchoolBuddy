@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">SchoolBuddy</string>
+    <string name="add_student_tool">Save</string>
+    <string name="reset_string">Reset</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="drawer_close">Close</string>
+    <string name="drawer_open">Open</string>
+
+    <string-array name="stream">
+        <item>Tap to choose Stream</item>
+        <item>SCIENCE</item>
+        <item>COMMERCE</item>
+    </string-array>
+
+    <string-array name="elective_science">
+        <item>Tap to Choose Elective I</item>
+        <item>Mathematics</item>
+        <item>Biology</item>
+    </string-array>
+
+    <string-array name="elective_commerce">
+        <item>Tap to Choose Elective I</item>
+        <item>Accountancy</item>
+        <item>Macro Business</item>
+        <item>Economics</item>
+    </string-array>
+
+    <string-array name="optional_commerce">
+        <item>Tap to Choose Optional</item>
+        <item>Informatics Practices</item>
+        <item>Mathematics</item>
+        <item>Physical Education</item>
+        <item>Economics</item>
+    </string-array>
+
+    <string-array name="optional_science">
+        <item>Tap to Choose Optional</item>
+        <item>Informatics Practices</item>
+        <item>Physical Education</item>
+        <item>Hindi</item>
+    </string-array>
+</resources>

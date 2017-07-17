@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.surajmalviya.schoolbuddy.StreamSelection">
+
+    <TextView
+        android:id="@+id/chooseClass"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Choose Class"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/r_group"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
+
+                <RadioButton
+                    android:id="@+id/eleventh"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="22sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:text="Eleventh (XI)"
+                    android:onClick="chooseStandard"/>
+                <RadioButton
+                    android:id="@+id/twelfth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_weight="1"
+                    android:text="Twelth (XII)"
+                    android:onClick="chooseStandard"/>
+            </RadioGroup>
+
+           <TextView
+                android:id="@id/r_group"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Choose Stream"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:layout_marginBottom="10dp"/>
+
+    <Spinner
+        android:id="@+id/stream"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"/>
+
+
+    <Spinner
+        android:id="@+id/elective_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/elective_2"
+        android:textSize="22sp"
+        android:text="ELECTIVE II:"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:id="@+id/elective_3"
+        android:textSize="22sp"
+        android:text="ELECTIVE III:"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <TextView
+        android:id="@+id/compulsary"
+        android:textSize="22sp"
+        android:text="COMPULSARY:"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent" />
+
+    <Spinner
+        android:id="@+id/optional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

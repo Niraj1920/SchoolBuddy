@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.surajmalviya.schoolbuddy.AddStudentPersonal">
+
+    <!--      <android.support.v7.widget.Toolbar
+              android:id="@+id/my_toolbar"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              android:background="@color/colorPrimary"
+              android:titleTextColor="#ffffff"
+              android:title="Add Student"
+              android:elevation="4dp"
+              android:theme="@style/AppTheme"
+              app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/student_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/boy" />
+
+                    <ImageView
+                        android:id="@+id/camera_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:onClick="getImageFromPhone"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/camera_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+
+                    <ToggleButton
+                        android:id="@+id/gender_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/colorAccent"
+                        android:onClick="changeGender"
+                        android:padding="15dp"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textOff="Gender: FEMALE"
+                        android:textOn="Gender: MALE"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gender_button"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="10dp"
+                        android:text="Tap to select Gender !"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sch_id"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:text="SCHOLAR ID: 123456"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Enter Student Name"
+                android:inputType="textCapWords"
+
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/calendar_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/colorAccent"
+                    android:onClick="showCalendar"
+                    android:src="@drawable/calendar" />
+
+                <EditText
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/calendar_button"
+                    android:hint="Date of Birth - DD/MM/YYYY"
+                    android:inputType="date"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Enter Contact Number"
+                android:inputType="number"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Enter a valid Email Address"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+

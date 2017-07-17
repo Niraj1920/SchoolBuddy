@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:fillViewport="false"
+    tools:context="com.example.surajmalviya.schoolbuddy.SaveResult">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/marks_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Marks Scored"
+            android:textSize="32sp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <TextView
+            android:id="@+id/elect1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elective I"
+            android:textSize="26sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/elect1_score"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="numberDecimal"
+            />
+        <TextView
+            android:id="@+id/elect2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elective II"
+            android:textSize="26sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/elect2_score"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="numberDecimal"
+            />
+        <TextView
+            android:id="@+id/elect3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elective III"
+            android:textSize="26sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/elect3_score"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="numberDecimal"
+            />
+        <TextView
+            android:id="@+id/elect4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compulsary Subject"
+            android:textSize="26sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/elect4_score"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="numberDecimal"
+            />
+        <TextView
+            android:id="@+id/elect5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Optional Subject"
+            android:textSize="26sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            />
+
+        <EditText
+            android:id="@+id/elect5_score"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginBottom="30dp"
+            android:inputType="numberDecimal"
+            />
+    </LinearLayout>
+
+</ScrollView>

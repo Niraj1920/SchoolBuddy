@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4ECE5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/desk" />
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="@color/tileForeground"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Oh ! Add Sudents. The Desk is empty yet !"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/noStudentFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="fapOnClick"
+
+        app:srcCompat="@drawable/add_student" />
+
+
+</RelativeLayout>

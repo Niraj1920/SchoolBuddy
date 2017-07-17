@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF98C4FA</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF98C4FA</color>
+    <color name="tileBackground">#f6dcf7</color>
+    <color name="greyish">#ccc9c9</color>
+    <color name="dull_white">#f5fcf8</color>
+    <color name="tileForeground">#2e4160</color>
+
+</resources>
