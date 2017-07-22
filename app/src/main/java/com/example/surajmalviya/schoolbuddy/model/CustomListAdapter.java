@@ -59,8 +59,8 @@ public class CustomListAdapter extends ArrayAdapter<Student> {
 
         String class_stream = studentStandard+ ""+Html.fromHtml("<sup>th</sup>")+" & "+studentStream;
 
-//        TextView tileScholarID = (TextView)convertView.findViewById(R.id.tileschid);
-//        tileScholarID.setText(studentScholarID);
+        TextView tileScholarID = (TextView)convertView.findViewById(R.id.tileschid);
+        tileScholarID.setText(studentScholarID+"");
 
         TextView tileStudentName = (TextView)convertView.findViewById(R.id.tile_studentName);
         tileStudentName.setText(studentName);
