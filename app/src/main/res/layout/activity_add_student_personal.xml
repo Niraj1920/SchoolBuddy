@@ -7,20 +7,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.example.surajmalviya.schoolbuddy.AddStudentPersonal">
-
-    <!--      <android.support.v7.widget.Toolbar
-              android:id="@+id/my_toolbar"
-              android:layout_width="match_parent"
-              android:layout_height="?attr/actionBarSize"
-              android:background="@color/colorPrimary"
-              android:titleTextColor="#ffffff"
-              android:title="Add Student"
-              android:elevation="4dp"
-              android:theme="@style/AppTheme"
-              app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    -->
-
+    
 
     <ScrollView
         android:layout_width="match_parent"
