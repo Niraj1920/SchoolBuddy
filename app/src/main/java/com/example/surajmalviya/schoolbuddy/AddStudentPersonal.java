@@ -1,8 +1,14 @@
 package com.example.surajmalviya.schoolbuddy;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.icu.util.Calendar;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,9 +18,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.surajmalviya.schoolbuddy.database.DatabaseSource;
@@ -134,6 +142,8 @@ public class AddStudentPersonal extends AppCompatActivity {
 
 
 
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.add_student, menu);
@@ -214,14 +224,8 @@ public class AddStudentPersonal extends AppCompatActivity {
     }
 
     public void showCalendar(View view) {
-//        Toast.makeText(this,"Calendar to be Opened !",Toast.LENGTH_SHORT).show();
-//        Intent intent = new Intent(this, StreamSelection.class);
-//        startActivity(intent);
-
-//        DatabaseSource source = new DatabaseSource(this);
-//        source.addStudent()
-
-
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getFragmentManager(), "Date Picker");
     }
 
 
@@ -303,14 +307,26 @@ public class AddStudentPersonal extends AppCompatActivity {
          }
     }
 
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener {
 
-    private void saveData(){
+        @RequiresApi(api = Build.VERSION_CODES.N)
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the current date as the default date in the picker
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
 
-        Student s= new Student(1,"",4,"",4,"","","","");
+            // Create a new instance of DatePickerDialog and return it
+            return new DatePickerDialog(getActivity(), this, year, month, day);
+        }
 
-        DatabaseSource databaseSource = new DatabaseSource(this);
-        databaseSource.addStudent(s);
-
-
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            String date = day+"/"+month+"/"+year;
+            Toast.makeText(getActivity() ,date,Toast.LENGTH_SHORT).show();
+        }
     }
+
 }
