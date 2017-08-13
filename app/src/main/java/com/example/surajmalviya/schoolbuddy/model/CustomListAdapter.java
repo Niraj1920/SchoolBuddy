@@ -97,6 +97,7 @@ public class CustomListAdapter extends ArrayAdapter<Student> {
                 Toast.makeText(getContext(),_thisStudent.getName() ,Toast.LENGTH_SHORT).show();
             }
         });
+
         Button resultInfo = (Button) convertView.findViewById(R.id.view_result);
         resultInfo.setOnClickListener(new View.OnClickListener() {
             @Override

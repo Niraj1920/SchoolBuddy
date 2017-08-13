@@ -40,7 +40,7 @@ public class SaveResult extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.skip_student:
-                goForward();
+                goForward(null);
                 return true;
 
             case R.id.reset_student_marks:
@@ -56,9 +56,20 @@ public class SaveResult extends AppCompatActivity {
     }
 
 
-    private void goForward(){
-        Intent toMainActivity = new Intent(this, MainActivity.class);
-        startActivity(toMainActivity);
+    private void goForward(StudentResult result){
+        if(result!= null) myStudent.setStudentResult(result);
+
+        dbSource.open();
+        boolean done = dbSource.addStudent(myStudent);
+        if(done){
+            DataSource.getDataSource().saveStudent(myStudent);
+            Toast.makeText(this,"Student Successfully Saved !", Toast.LENGTH_SHORT).show();
+            Intent toMainActivity = new Intent(this, MainActivity.class);
+            startActivity(toMainActivity);
+        }
+        else{
+            Toast.makeText(this, "Couldnt save the student !", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void resetStudentMarks(){
@@ -79,17 +90,7 @@ public class SaveResult extends AppCompatActivity {
         double ele5 = Double.parseDouble(ele5view.getText().toString());
 
         StudentResult result = new StudentResult(myStudent.getScholarID(), ele1, ele2, ele3, ele5, ele4);
-        myStudent.setStudentResult(result);
-        dbSource.open();
-        boolean done = dbSource.addStudent(myStudent);
-        if(done){
-            DataSource.getDataSource().saveStudent(myStudent);
-            Toast.makeText(this,"Student Successfully Saved !", Toast.LENGTH_SHORT).show();
-            goForward();
-        }
-        else{
-            Toast.makeText(this, "Couldnt save the student !", Toast.LENGTH_SHORT).show();
-        }
+        goForward(result);
     }
 
 

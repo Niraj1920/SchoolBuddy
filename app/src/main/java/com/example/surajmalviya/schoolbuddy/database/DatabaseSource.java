@@ -107,7 +107,9 @@ public class DatabaseSource
             }
 
             StudentResult student_result = fetchResult(student);
-            student.setStudentResult(student_result);
+            if(student_result != null) {
+                student.setStudentResult(student_result);
+            }
             allStudents.add(student);
         }
 
@@ -132,7 +134,7 @@ public class DatabaseSource
 
         if(result.moveToNext())
         {
-            Log.e("in in","inin");
+
             double elect_1=result.getDouble(result.getColumnIndex(DataSchema.ScoreTable.ELECTIVE_I));
             double elect_2=result.getDouble(result.getColumnIndex(DataSchema.ScoreTable.ELECTIVE_II));
             double elect_3=result.getDouble(result.getColumnIndex(DataSchema.ScoreTable.ELECTIVE_III));
@@ -149,6 +151,10 @@ public class DatabaseSource
             score.setPercentage();
             score.setGrade();
         }
+        else{
+            score = null;
+        }
+        result.close();
 
         return score;
     }
