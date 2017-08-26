@@ -1,12 +1,11 @@
 package com.example.surajmalviya.schoolbuddy.model;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.surajmalviya.schoolbuddy.R;
-
-import org.w3c.dom.Text;
+import com.example.surajmalviya.schoolbuddy.StudentInfo;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,6 +29,7 @@ import java.util.List;
 
 public class CustomListAdapter extends ArrayAdapter<Student> {
 
+    public static final String SELECTED_STUDENT_ID = "SELECTED_STUDENT";
     private List<Student> myStudents;
     private LayoutInflater mInflator;
 
@@ -94,7 +93,10 @@ public class CustomListAdapter extends ArrayAdapter<Student> {
         moreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),_thisStudent.getName() ,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(),_thisStudent.getName() ,Toast.LENGTH_SHORT).show();
+                Intent info = new Intent(getContext(), StudentInfo.class);
+                info.putExtra(SELECTED_STUDENT_ID, _thisStudent.getScholarID());
+                getContext().startActivity(info);
             }
         });
 
