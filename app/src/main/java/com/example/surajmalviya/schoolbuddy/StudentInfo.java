@@ -3,6 +3,8 @@ package com.example.surajmalviya.schoolbuddy;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.ImageView;
 
 import com.example.surajmalviya.schoolbuddy.model.CustomListAdapter;
@@ -33,4 +35,11 @@ public class StudentInfo extends AppCompatActivity {
         Drawable drawable = Drawable.createFromStream(getAssets().open(image),null);
         return drawable;
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.info_student, menu);
+        return true;
+    }
+
 }
