@@ -2,6 +2,8 @@
     <string name="app_name">SchoolBuddy</string>
     <string name="add_student_tool">Save</string>
     <string name="reset_string">Reset</string>
+    <string name="edit_student">Edit</string>
+    <string name="delete_student">Delete</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="drawer_close">Close</string>
